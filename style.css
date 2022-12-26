@@ -1,0 +1,67 @@
+/* АНИМАЦИИ */
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  background-color: aqua;
+  margin: auto;
+  overflow: hidden;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  border-radius: 100px;
+  /* animation-name: blockAnimation; */
+  /* ! ВРЕМЯ - за которое должен пройти один цикл анимации */
+  /* animation-duration: 10s; */
+  /* ! Ускорение или замедление времени анимации */
+  /* animation-timing-function: ease-in; */
+  /* ! Настройка задержки времени перед началом анимации */
+  /* animation-delay: 2s; */
+  /* ! Определяет количество повторений анимации */
+  /* animation-iteration-count: infinite; */
+  /* ! Даёт возможность при каждом повторе анимации идти по альтернативному пути */
+  /* animation-direction: alternate; */
+  animation: blockAnimation2 5s ease-out 1s infinite alternate;
+}
+
+@keyframes blockAnimation 
+  /* from - от каких свойств начинать */
+  from {
+  margin-top: 0;
+}
+
+/* to - до каких свойств измениться */
+to {
+  margin-top: 300px;
+  margin-left: 800px;
+}
+
+@keyframes blockAnimation2 {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 160px;
+    margin-left: 400px;
+  }
+
+  100% {
+    margin-top: 0px;
+    margin-left: 800px;
+  }
+}
+
+.AOS {
+  border: 5px solid yellowgreen;
+  background-color: blueviolet;
+  width: 250px;
+  height: 250px;
+}
